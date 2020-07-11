@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="605.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.gildardoalvarado.controller.MedicoController">
+   <children>
+      <Label layoutX="277.0" layoutY="14.0" text="Medicos">
+         <font>
+            <Font name="Mongolian Baiti" size="48.0" />
+         </font>
+         <effect>
+            <Reflection fraction="0.5" topOpacity="0.3" />
+         </effect>
+      </Label>
+      <Label layoutX="55.0" layoutY="111.0" text="Licencia medica">
+         <effect>
+            <Bloom />
+         </effect>
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtLicenciaMedica" editable="false" layoutX="193.0" layoutY="111.0" onKeyTyped="#ValidacionNumeros">
+         <effect>
+            <DropShadow color="#368ca4" />
+         </effect>
+      </TextField>
+      <TextField fx:id="txtNombres" editable="false" layoutX="193.0" layoutY="143.0" onKeyTyped="#ValidacionLetras" prefHeight="25.0" prefWidth="353.0">
+         <effect>
+            <DropShadow color="#368ca4" />
+         </effect>
+      </TextField>
+      <Label layoutX="78.0" layoutY="143.0" text="Nombres">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="78.0" layoutY="176.0" text="Apellidos">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtApellidos" editable="false" layoutX="193.0" layoutY="176.0" onKeyTyped="#ValidacionLetras" prefHeight="25.0" prefWidth="353.0">
+         <effect>
+            <DropShadow color="#368ca4" />
+         </effect>
+      </TextField>
+      <Label layoutX="53.0" layoutY="207.0" text="Hora de Entrada">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtHoraDeEntrada" editable="false" layoutX="193.0" layoutY="207.0" onKeyTyped="#ValidacionNumeros" prefHeight="25.0" prefWidth="86.0">
+         <effect>
+            <DropShadow color="#368ca4" />
+         </effect>
+      </TextField>
+      <Label layoutX="286.0" layoutY="207.0" text="Hora de salida">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtHoraDeSalida" editable="false" layoutX="391.0" layoutY="207.0" onKeyTyped="#ValidacionNumeros" prefHeight="25.0" prefWidth="102.0">
+         <effect>
+            <DropShadow color="#368ca4" />
+         </effect>
+      </TextField>
+      <Label layoutX="501.0" layoutY="207.0" text="Turno maximo">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtTurnoMaximo" editable="false" layoutX="614.0" layoutY="207.0" prefHeight="25.0" prefWidth="86.0">
+         <effect>
+            <DropShadow color="#368ca4" />
+         </effect>
+      </TextField>
+      <Label layoutX="176.0" layoutY="245.0" text="Sexo">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtSexo" editable="false" layoutX="226.0" layoutY="245.0" onKeyTyped="#ValidacionLetras" prefHeight="25.0" prefWidth="275.0">
+         <effect>
+            <DropShadow color="#368ca4" />
+         </effect>
+      </TextField>
+      <TableView fx:id="tblMedicos" layoutX="10.0" layoutY="284.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="244.0" prefWidth="731.0">
+        <columns>
+            <TableColumn fx:id="colCodigoMedico" prefWidth="52.0" text="Codigo" />
+          <TableColumn fx:id="colLicenciaMedica" prefWidth="98.0" text="Licencia Medica" />
+          <TableColumn fx:id="colNombres" prefWidth="147.0" text="Nombres" />
+            <TableColumn fx:id="colApellidos" minWidth="1.0" prefWidth="153.0" text="Apellidos" />
+            <TableColumn fx:id="colEntrada" prefWidth="48.0" text="Entrada" />
+            <TableColumn fx:id="colSalida" prefWidth="51.0" text="Salida" />
+            <TableColumn fx:id="colTurnoMaximo" minWidth="0.0" prefWidth="96.0" text="Turno maximo" />
+            <TableColumn fx:id="colSexo" minWidth="1.0" prefWidth="85.0" text="sexo" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnNuevo" layoutX="219.0" layoutY="546.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="38.0" prefWidth="59.0" text="Nuevo">
+         <effect>
+            <DropShadow color="#368ca4" />
+         </effect></Button>
+      <Button fx:id="btnEliminar" layoutX="289.0" layoutY="546.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="38.0" prefWidth="59.0" text="Eliminar">
+         <effect>
+            <DropShadow color="#368ca4" />
+         </effect></Button>
+      <Button fx:id="btnEditar" layoutX="360.0" layoutY="546.0" mnemonicParsing="false" onAction="#editar" prefHeight="38.0" prefWidth="59.0" text="Editar">
+         <effect>
+            <DropShadow color="#368ca4" />
+         </effect></Button>
+      <Button fx:id="btnReporte" layoutX="427.0" layoutY="546.0" mnemonicParsing="false" onAction="#generarReporte" prefHeight="38.0" prefWidth="59.0" text="Reporte">
+         <effect>
+            <DropShadow color="#368ca4" />
+         </effect></Button>
+      <ImageView fitHeight="150.0" fitWidth="115.0" layoutX="640.0" layoutY="14.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/medco.jpg" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <DropShadow />
+         </effect>
+      </ImageView>
+      <Label layoutX="621.0" layoutY="169.0" text="Regresar a menu principal">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="88.0" fitWidth="77.0" layoutX="494.0" layoutY="25.0" onMouseClicked="#ventanaTelefonosMedico" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/TelefonosMedico.jpg" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label layoutX="476.0" layoutY="116.0" text="Ir a Telefonos Del Medico">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

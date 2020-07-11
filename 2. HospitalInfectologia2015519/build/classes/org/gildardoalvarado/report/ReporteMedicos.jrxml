@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteMedicos" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="df20d825-2094-45b7-b268-a82b2accb2f6">
+	<property name="ireport.zoom" value="1.0000000000000022"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="72"/>
+	<queryString>
+		<![CDATA[call sp_ProdecimientoJoinMedicos();]]>
+	</queryString>
+	<field name="codigoMedico" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="licenciaMedica" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombres" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="apellidos" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="horaEntrada" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="horaSalida" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="turnoMaximo" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="sexo" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoTelefonoMedico" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefonoPersonal" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefonoTrabajo" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="72" splitType="Stretch">
+			<staticText>
+				<reportElement x="83" y="16" width="472" height="36" uuid="00317736-4d00-4f91-bbcc-9166296ed560"/>
+				<textElement>
+					<font fontName="Footlight MT Light" size="22"/>
+				</textElement>
+				<text><![CDATA[HOSPITAL DE INFECTOLOGÍA "José De Dios"]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="231" y="52" width="180" height="20" uuid="4b2d8f9d-f448-486d-bf49-ec62657f702c"/>
+				<textElement>
+					<font fontName="Footlight MT Light" size="14"/>
+				</textElement>
+				<text><![CDATA[Confia tu salud en nosotros ]]></text>
+			</staticText>
+			<image>
+				<reportElement x="0" y="0" width="138" height="72" uuid="c0aaf07e-5792-4a59-8dce-910796fda618"/>
+				<imageExpression><![CDATA["C:\\Users\\programacion\\Documents\\NetBeansProjects\\HospitalInfectologia2015519\\src\\org\\gildardoalvarado\\images\\iconoHospital.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="114" splitType="Stretch">
+			<staticText>
+				<reportElement x="51" y="38" width="341" height="54" uuid="1a2f47dc-24a9-4a0a-8cd8-15a2d630bea9"/>
+				<textElement>
+					<font fontName="Footlight MT Light" size="28"/>
+				</textElement>
+				<text><![CDATA[REPORTE DE MEDICO]]></text>
+			</staticText>
+			<image>
+				<reportElement x="350" y="0" width="133" height="92" uuid="1bacf8cb-720f-4a80-afa0-583e980d7e55"/>
+				<imageExpression><![CDATA["C:\\Users\\programacion\\Documents\\NetBeansProjects\\HospitalInfectologia2015519\\src\\org\\gildardoalvarado\\images\\Fondo de reporte.jpg"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="413" y="38" width="57" height="64" uuid="7e9d4059-672b-44ee-a9eb-11450def6e2a"/>
+				<imageExpression><![CDATA["C:\\Users\\programacion\\Documents\\NetBeansProjects\\HospitalInfectologia2015519\\src\\org\\gildardoalvarado\\images\\Reporte Hospiatal.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="38" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="-43" y="0" width="94" height="20" uuid="26feebb5-01a9-4cec-8249-177033950f90"/>
+				<textElement>
+					<font fontName="Footlight MT Light" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Codigo Medico]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="20" width="555" height="1" forecolor="#00CCCC" uuid="87f6ca1b-eac6-43b5-9400-e3ea0b238c7c"/>
+			</line>
+			<staticText>
+				<reportElement x="94" y="0" width="103" height="20" uuid="eb7d837b-a70d-4ca9-83b3-304236dc3057"/>
+				<textElement>
+					<font fontName="Footlight MT Light" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Licencia Medica]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="197" y="0" width="77" height="20" uuid="e7157457-1197-41be-8153-bba507470113"/>
+				<textElement>
+					<font fontName="Footlight MT Light" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nombres]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="274" y="1" width="66" height="20" uuid="d3a77171-c680-4235-8ee9-b3f048c7f05c"/>
+				<textElement>
+					<font fontName="Footlight MT Light" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Apellidos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="420" y="0" width="78" height="20" uuid="8bfc1598-9dd7-42ca-9e3a-51d93188e81c"/>
+				<textElement>
+					<font fontName="Footlight MT Light" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[HoraEntrada]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="494" y="0" width="61" height="20" uuid="53914eb4-e5c5-475b-8d99-31fedc390997"/>
+				<textElement>
+					<font fontName="Footlight MT Light" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[HoraSalida]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="24" width="555" height="1" forecolor="#00CCCC" uuid="22165077-b1ac-47b5-910c-2825e53abedf"/>
+			</line>
+			<staticText>
+				<reportElement x="345" y="1" width="70" height="20" uuid="4e9b4b2a-2da1-473a-8313-5c19bfca51b4"/>
+				<textElement>
+					<font fontName="Footlight MT Light" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[telefono]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="41" splitType="Stretch">
+			<textField>
+				<reportElement x="35" y="0" width="35" height="20" uuid="e22e62c0-c40b-420f-be9b-6917634ca8e3"/>
+				<textFieldExpression><![CDATA[$F{codigoMedico}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="117" y="0" width="80" height="20" uuid="b0a74ab5-fb14-43a5-9f5e-d5b65e24cee8"/>
+				<textFieldExpression><![CDATA[$F{licenciaMedica}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="204" y="0" width="70" height="20" uuid="ae5ce8ef-183b-453e-b361-67f2ac83477f"/>
+				<textFieldExpression><![CDATA[$F{nombres}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="274" y="0" width="66" height="20" uuid="58021149-7c0c-4d43-9f99-e4c02b199ef8"/>
+				<textFieldExpression><![CDATA[$F{apellidos}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="1" y="20" width="555" height="1" forecolor="#00CCCC" uuid="b7ccef33-cc71-4e07-955b-187dfa287c4a"/>
+			</line>
+			<textField>
+				<reportElement x="415" y="2" width="83" height="20" uuid="67dba8f4-7558-49c2-a301-cedef28c189b"/>
+				<textFieldExpression><![CDATA[$F{horaEntrada}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="494" y="2" width="61" height="20" uuid="05ffa1b6-fa2a-479f-be0d-eee63686d895"/>
+				<textFieldExpression><![CDATA[$F{horaSalida}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="340" y="0" width="100" height="20" uuid="966b1c6e-05be-4cb7-bb9c-66842caf5339"/>
+				<textFieldExpression><![CDATA[$F{telefonoTrabajo}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="59" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="154" splitType="Stretch">
+			<image>
+				<reportElement x="367" y="8" width="145" height="146" uuid="911e3782-dab8-4634-a8a8-29c44d8d8304"/>
+				<imageExpression><![CDATA["C:\\Users\\programacion\\Documents\\NetBeansProjects\\HospitalInfectologia2015519\\src\\org\\gildardoalvarado\\images\\circulo de pie de pagina.jpg"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="-43" y="95" width="513" height="31" uuid="225f294e-4a47-49d3-bfff-f593170d8cd1"/>
+				<imageExpression><![CDATA["C:\\Users\\programacion\\Documents\\NetBeansProjects\\HospitalInfectologia2015519\\src\\org\\gildardoalvarado\\images\\barra de pie de pagina.jpg"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="-38" y="27" width="95" height="68" uuid="7943a7a5-6c0e-4bdc-9529-f815ab71529c"/>
+				<imageExpression><![CDATA["C:\\Users\\programacion\\Documents\\NetBeansProjects\\HospitalInfectologia2015519\\src\\org\\gildardoalvarado\\images\\pie de pagina.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</pageFooter>
+</jasperReport>

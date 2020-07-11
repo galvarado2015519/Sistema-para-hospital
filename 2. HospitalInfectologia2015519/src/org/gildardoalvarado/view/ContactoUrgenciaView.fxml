@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="653.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.gildardoalvarado.controller.ContactoUrgenciaController">
+   <children>
+      <Label layoutX="194.0" layoutY="14.0" text="Contacto Urgencia">
+         <effect>
+            <Reflection fraction="0.5" topOpacity="0.3" />
+         </effect>
+         <font>
+            <Font name="Mongolian Baiti" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="63.0" layoutY="87.0" text="Nombres">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="63.0" layoutY="126.0" text="Apellidos">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="32.0" layoutY="166.0" text="Numero Contacto">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="54.0" fitWidth="103.0" layoutX="32.0" layoutY="14.0" onMouseClicked="#ventanaPacientes" pickOnBounds="true" preserveRatio="true">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <InnerShadow />
+         </effect>
+         <image>
+            <Image url="@../images/regresar.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="txtNumeroContacto" editable="false" layoutX="184.0" layoutY="166.0" onKeyTyped="#ValidacionNumeros">
+         <effect>
+            <DropShadow color="#368ca4" />
+         </effect>
+      </TextField>
+      <TextField fx:id="txtNombres" editable="false" layoutX="184.0" layoutY="87.0" onKeyTyped="#ValidacionLetras" prefHeight="25.0" prefWidth="355.0">
+         <effect>
+            <DropShadow color="#368ca4" />
+         </effect>
+      </TextField>
+      <TextField fx:id="txtApellidos" editable="false" layoutX="184.0" layoutY="126.0" onKeyTyped="#ValidacionLetras" prefHeight="25.0" prefWidth="355.0">
+         <effect>
+            <DropShadow color="#368ca4" />
+         </effect>
+      </TextField>
+      <TableView fx:id="tblNumeroContacto" layoutX="11.0" layoutY="213.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="108.0" prefWidth="631.0">
+         <columns>
+            <TableColumn fx:id="colCodigoContacto" prefWidth="105.0" text="Codigo Contacto " />
+            <TableColumn fx:id="colCodigoPaciente" maxWidth="400.0" prefWidth="103.0" text="Codigo Paciente" />
+            <TableColumn fx:id="colNombres" minWidth="0.0" prefWidth="151.0" text="Nombres" />
+            <TableColumn fx:id="colApellidos" maxWidth="400.0" prefWidth="152.0" text="Apellidos" />
+            <TableColumn fx:id="colNumeroContacto" maxWidth="119.0" prefWidth="119.0" text="Numero Contacto" />
+         </columns>
+      </TableView>
+      <Button fx:id="btnNuevo" layoutX="181.0" layoutY="337.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="38.0" prefWidth="59.0" text="Nuevo">
+         <effect>
+            <DropShadow color="#368ca4" />
+         </effect>
+      </Button>
+      <Button fx:id="btnEliminar" layoutX="259.0" layoutY="337.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="38.0" prefWidth="59.0" text="Eliminar">
+         <effect>
+            <DropShadow color="#368ca4" />
+         </effect>
+      </Button>
+      <Button fx:id="btnReporte" layoutX="414.0" layoutY="337.0" mnemonicParsing="false" onAction="#reporte" prefHeight="38.0" prefWidth="59.0" text="Reporte">
+         <effect>
+            <DropShadow color="#368ca4" />
+         </effect>
+      </Button>
+      <Button fx:id="btnEditar" layoutX="332.0" layoutY="337.0" mnemonicParsing="false" onAction="#editar" prefHeight="38.0" prefWidth="59.0" text="Editar">
+         <effect>
+            <DropShadow color="#368ca4" />
+         </effect>
+      </Button>
+      <Label layoutX="351.0" layoutY="166.0" text="Codigo Paciente">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbCodigoPaciente" disable="true" layoutX="473.0" layoutY="166.0" prefWidth="150.0" />
+   </children>
+</AnchorPane>

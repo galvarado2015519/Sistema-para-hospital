@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="571.0" prefWidth="899.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.gildardoalvarado.controller.PacienteController">
+   <children>
+      <Label layoutX="348.0" layoutY="14.0" text="Pacientes">
+         <font>
+            <Font name="Mongolian Baiti" size="48.0" />
+         </font>
+         <effect>
+            <Reflection fraction="0.5" topOpacity="0.3" />
+         </effect>
+      </Label>
+      <TextField fx:id="txtNombres" editable="false" layoutX="144.0" layoutY="102.0" onKeyTyped="#ValidacionLetras" prefHeight="25.0" prefWidth="355.0">
+         <effect>
+            <DropShadow color="#368ca4" />
+         </effect>
+      </TextField>
+      <Label layoutX="62.0" layoutY="102.0" text="Nombres">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="62.0" layoutY="144.0" text="Apellidos">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="539.0" layoutY="144.0" text="Fecha de Nacimiento">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="533.0" layoutY="102.0" text="DPI">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="62.0" layoutY="184.0" text="Dirección">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="56.0" layoutY="223.0" text="Ocupación">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="692.0" layoutY="102.0" text="sexo">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtApellidos" editable="false" layoutX="144.0" layoutY="144.0" onKeyTyped="#ValidacionLetras" prefHeight="25.0" prefWidth="355.0">
+         <effect>
+            <DropShadow color="#368ca4" />
+         </effect>
+      </TextField>
+      <TextField fx:id="txtDPI" editable="false" layoutX="568.0" layoutY="102.0" onKeyTyped="#ValidacionNumeros" prefHeight="25.0" prefWidth="112.0">
+         <effect>
+            <DropShadow color="#368ca4" />
+         </effect>
+      </TextField>
+      <TextField fx:id="txtDireccion" editable="false" layoutX="141.0" layoutY="184.0" onKeyTyped="#ValidacionLetras" prefHeight="25.0" prefWidth="355.0">
+         <effect>
+            <DropShadow color="#368ca4" />
+         </effect>
+      </TextField>
+      <TextField fx:id="txtOcupacion" editable="false" layoutX="141.0" layoutY="223.0" onKeyTyped="#ValidacionLetras" prefHeight="25.0" prefWidth="355.0">
+         <effect>
+            <DropShadow color="#368ca4" />
+         </effect>
+      </TextField>
+      <TextField fx:id="txtSexo" editable="false" layoutX="738.0" layoutY="102.0" onKeyTyped="#ValidacionLetras" prefHeight="25.0" prefWidth="82.0">
+         <effect>
+            <DropShadow color="#368ca4" />
+         </effect>
+      </TextField>
+      <Button fx:id="btnNuevo" layoutX="291.0" layoutY="505.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="38.0" prefWidth="59.0" text="Nuevo">
+         <effect>
+            <DropShadow color="#368ca4" />
+         </effect></Button>
+      <Button fx:id="btnEliminar" layoutX="372.0" layoutY="505.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="38.0" prefWidth="59.0" text="Eliminar">
+         <effect>
+            <DropShadow color="#368ca4" />
+         </effect></Button>
+      <Button fx:id="btnReporte" layoutX="529.0" layoutY="505.0" mnemonicParsing="false" onAction="#generarReporte" prefHeight="38.0" prefWidth="59.0" text="Reporte">
+         <effect>
+            <DropShadow color="#368ca4" />
+         </effect></Button>
+      <Button fx:id="btnEditar" layoutX="448.0" layoutY="505.0" mnemonicParsing="false" onAction="#editar" prefHeight="38.0" prefWidth="59.0" text="Editar">
+         <effect>
+            <DropShadow color="#368ca4" />
+         </effect></Button>
+      <TableView fx:id="tblPaciente" layoutX="20.0" layoutY="262.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="227.0" prefWidth="859.0">
+         <columns>
+            <TableColumn fx:id="colCodigoPaciente" prefWidth="61.0" text="CodigoPaciente" />
+            <TableColumn fx:id="colNombre" prefWidth="146.0" text="Nombres" />
+            <TableColumn fx:id="colApellidos" minWidth="1.0" prefWidth="137.0" text="Apellidos" />
+            <TableColumn fx:id="colDPI" prefWidth="112.0" text="DPI" />
+            <TableColumn fx:id="colFechaNac" minWidth="0.0" prefWidth="70.0" text="FechaNac" />
+            <TableColumn fx:id="colEdad" prefWidth="44.0" text="Edad" />
+            <TableColumn fx:id="colDireccion" minWidth="1.0" prefWidth="113.0" text="Direccion" />
+            <TableColumn fx:id="colOcupacion" minWidth="1.0" prefWidth="104.0" text="Ocupacion" />
+            <TableColumn fx:id="colSexo" prefWidth="70.0" text="Sexo" />
+         </columns>
+      </TableView>
+      <ImageView fitHeight="54.0" fitWidth="103.0" layoutX="31.0" layoutY="14.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/regresar.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </ImageView>
+      <GridPane fx:id="grpFecha" disable="true" layoutX="688.0" layoutY="144.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <ImageView fitHeight="96.0" fitWidth="59.0" layoutX="675.0" layoutY="173.0" onMouseClicked="#ventanaContactoUrgencia" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/ContactoUrgencia.jpg" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label layoutX="664.0" layoutY="232.0" text="Contacto Urgencia">
+         <font>
+            <Font size="9.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="496.0" prefWidth="777.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.gildardoalvarado.controller.TurnoController">
+   <children>
+      <Label layoutX="332.0" layoutY="37.0" text="Turno">
+         <effect>
+            <Reflection fraction="0.5" topOpacity="0.3" />
+         </effect>
+         <font>
+            <Font name="Mongolian Baiti" size="36.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnEditar" layoutX="404.0" layoutY="431.0" mnemonicParsing="false" onAction="#editar" prefHeight="38.0" prefWidth="59.0" text="Editar">
+         <effect>
+            <DropShadow color="#368ca4" />
+         </effect>
+      </Button>
+      <Button fx:id="btnReporte" layoutX="479.0" layoutY="431.0" mnemonicParsing="false" onAction="#reporte" prefHeight="38.0" prefWidth="59.0" text="Reporte">
+         <effect>
+            <DropShadow color="#368ca4" />
+         </effect>
+      </Button>
+      <Button fx:id="btnEliminar" layoutX="325.0" layoutY="431.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="38.0" prefWidth="59.0" text="Eliminar">
+         <effect>
+            <DropShadow color="#368ca4" />
+         </effect>
+      </Button>
+      <Button fx:id="btnNuevo" layoutX="251.0" layoutY="431.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="38.0" prefWidth="59.0" text="Nuevo">
+         <effect>
+            <DropShadow color="#368ca4" />
+         </effect>
+      </Button>
+      <ImageView fitHeight="54.0" fitWidth="103.0" layoutX="62.0" layoutY="37.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <InnerShadow />
+         </effect>
+         <image>
+            <Image url="@../images/regresar.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="txtFechaTurno" editable="false" layoutX="131.0" layoutY="121.0" onKeyTyped="#ValidacionFecha" onMouseClicked="#AvisoDeEscritura" prefHeight="25.0" prefWidth="111.0">
+         <effect>
+            <DropShadow color="#368ca4" />
+         </effect>
+      </TextField>
+      <Label layoutX="32.0" layoutY="121.0" text="Fecha Turno">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblTurno" layoutX="25.0" layoutY="269.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="142.0" prefWidth="708.0">
+         <columns>
+            <TableColumn fx:id="colCodigoTurno" prefWidth="84.0" text="Codigo Turno" />
+            <TableColumn fx:id="colFechaTurno" prefWidth="84.0" text="Fecha Turno" />
+            <TableColumn fx:id="colFechaCita" minWidth="0.0" prefWidth="85.0" text="Fecha Cita" />
+            <TableColumn fx:id="colValorCita" maxWidth="400.0" prefWidth="81.0" text="Valor de Cita" />
+            <TableColumn fx:id="colCodigoEspecialidad" maxWidth="478.0" prefWidth="127.0" text="Codigo Especialidad" />
+            <TableColumn fx:id="colCodigoPaciente" maxWidth="224.0" prefWidth="126.0" text="Codigo Paciente" />
+            <TableColumn fx:id="colCodigoResponsableTurno" maxWidth="400.0" prefWidth="204.0" text="Codigo del Responsable de Turno" />
+         </columns>
+      </TableView>
+      <Label layoutX="250.0" layoutY="121.0" text="Fecha Cita">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtFechaCita" editable="false" layoutX="330.0" layoutY="121.0" onKeyTyped="#ValidacionFecha" onMouseClicked="#AvisoDeEscritura" prefHeight="25.0" prefWidth="111.0">
+         <effect>
+            <DropShadow color="#368ca4" />
+         </effect>
+      </TextField>
+      <Label layoutX="465.0" layoutY="120.0" text="Valor De Cita">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtValorCita" editable="false" layoutX="567.0" layoutY="120.0" onKeyTyped="#ValidacionValorCita" prefHeight="25.0" prefWidth="111.0">
+         <effect>
+            <DropShadow color="#368ca4" />
+         </effect>
+      </TextField>
+      <ComboBox fx:id="cmbCodigoEspecialidadMedico" disable="true" layoutX="315.0" layoutY="172.0" prefWidth="150.0" />
+      <ComboBox fx:id="cmbCodigoPaciente" disable="true" layoutX="187.0" layoutY="216.0" prefWidth="150.0" />
+      <ComboBox fx:id="cmbResponsableTurno" disable="true" layoutX="603.0" layoutY="216.0" prefWidth="150.0" />
+      <Label layoutX="36.0" layoutY="172.0" text="Codigo de la Especialidad del Medico">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="32.0" layoutY="216.0" text="Codigo del Paciente">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="355.0" layoutY="216.0" text="Codigo del Responsable del Turno ">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="504.0" prefWidth="637.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.gildardoalvarado.controller.EspecialidadesController">
+   <children>
+      <Label layoutX="216.0" layoutY="14.0" text="Especialidades">
+         <font>
+            <Font name="Mongolian Baiti" size="36.0" />
+         </font>
+         <effect>
+            <Reflection fraction="0.5" topOpacity="0.3" />
+         </effect>
+      </Label>
+      <TableView fx:id="tblEspecialidad" layoutX="20.0" layoutY="175.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="248.0" prefWidth="595.0">
+        <columns>
+          <TableColumn fx:id="colCodigoEspecialidad" prefWidth="139.0" text="CodigoEspecialidad" />
+          <TableColumn fx:id="colEspecialidad" minWidth="0.0" prefWidth="455.0" text="Especialidad" />
+        </columns>
+      </TableView>
+      <TextField fx:id="txtEspecialidad" editable="false" layoutX="157.0" layoutY="106.0" onKeyTyped="#ValidacionLetras">
+         <effect>
+            <DropShadow color="#368ca4" />
+         </effect>
+      </TextField>
+      <Label layoutX="55.0" layoutY="106.0" text="Especialidad">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <Button fx:id="btnReporte" layoutX="395.0" layoutY="435.0" mnemonicParsing="false" onAction="#reporte" prefHeight="38.0" prefWidth="59.0" text="Reporte">
+         <effect>
+            <DropShadow color="#368ca4" />
+         </effect>
+      </Button>
+      <Button fx:id="btnEditar" layoutX="327.0" layoutY="435.0" mnemonicParsing="false" onAction="#editar" prefHeight="38.0" prefWidth="59.0" text="Editar">
+         <effect>
+            <DropShadow color="#368ca4" />
+         </effect>
+      </Button>
+      <Button fx:id="btnEliminar" layoutX="263.0" layoutY="435.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="38.0" prefWidth="59.0" text="Eliminar">
+         <effect>
+            <DropShadow color="#368ca4" />
+         </effect>
+      </Button>
+      <Button fx:id="btnNuevo" layoutX="192.0" layoutY="435.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="38.0" prefWidth="59.0" text="Nuevo">
+         <effect>
+            <DropShadow color="#368ca4" />
+         </effect>
+      </Button>
+      <ImageView fitHeight="54.0" fitWidth="103.0" layoutX="41.0" layoutY="24.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <InnerShadow />
+         </effect>
+         <image>
+            <Image url="@../images/regresar.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="504.0" prefWidth="702.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.gildardoalvarado.controller.MedicoEspecialidadController">
+   <children>
+      <ComboBox fx:id="cmbCodigoMedico" disable="true" layoutX="164.0" layoutY="131.0" prefWidth="150.0" />
+      <TableView fx:id="tblMedicoEspecialidad" layoutX="35.0" layoutY="279.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="142.0" prefWidth="629.0">
+         <columns>
+            <TableColumn fx:id="colEspecialidadMedico" prefWidth="166.0" text="Codigo Medico Especialidad" />
+            <TableColumn fx:id="colCodigoMedico" minWidth="0.0" prefWidth="140.0" text="Codigo Medico" />
+            <TableColumn fx:id="colCodigoHorario" maxWidth="400.0" prefWidth="163.0" text="Codigo Horario" />
+            <TableColumn fx:id="colCodigoEspecialidad" maxWidth="478.0" prefWidth="159.0" text="Codigo Especialidad" />
+         </columns>
+      </TableView>
+      <Label layoutX="42.0" layoutY="131.0" text="Codigo Medico ">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="54.0" fitWidth="103.0" layoutX="35.0" layoutY="33.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <InnerShadow />
+         </effect>
+         <image>
+            <Image url="@../images/regresar.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnNuevo" layoutX="187.0" layoutY="445.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="38.0" prefWidth="59.0" text="Nuevo">
+         <effect>
+            <DropShadow color="#368ca4" />
+         </effect>
+      </Button>
+      <Button fx:id="btnEliminar" layoutX="261.0" layoutY="445.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="38.0" prefWidth="59.0" text="Eliminar">
+         <effect>
+            <DropShadow color="#368ca4" />
+         </effect>
+      </Button>
+      <Button fx:id="btnReporte" layoutX="415.0" layoutY="445.0" mnemonicParsing="false" onAction="#reporte" prefHeight="38.0" prefWidth="59.0" text="Reporte">
+         <effect>
+            <DropShadow color="#368ca4" />
+         </effect>
+      </Button>
+      <Button fx:id="btnEditar" layoutX="340.0" layoutY="445.0" mnemonicParsing="false" onAction="#editar" prefHeight="38.0" prefWidth="59.0" text="Editar">
+         <effect>
+            <DropShadow color="#368ca4" />
+         </effect>
+      </Button>
+      <Label layoutX="173.0" layoutY="40.0" text="Especialidad del Medico">
+         <effect>
+            <Reflection fraction="0.5" topOpacity="0.3" />
+         </effect>
+         <font>
+            <Font name="Mongolian Baiti" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="330.0" layoutY="131.0" text="Codigo Especialidad">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="44.0" layoutY="182.0" text="Codigo Horario">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbCodigoHorario" disable="true" layoutX="164.0" layoutY="182.0" prefWidth="150.0" />
+      <ComboBox fx:id="cmbCodigoEspecialidad" disable="true" layoutX="479.0" layoutY="131.0" prefWidth="150.0" />
+   </children>
+</AnchorPane>

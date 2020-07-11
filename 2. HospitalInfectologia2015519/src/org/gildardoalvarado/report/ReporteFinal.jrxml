@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteFinal" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0b7d5ca0-f320-4606-9cff-f3c7d80cae98">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="46"/>
+	<parameter name="codMedico" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[call sp_ProdecimientoJoinFinal($P{codMedico});]]>
+	</queryString>
+	<field name="codigoMedico" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="LicenciaMedica" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Nombres" class="java.lang.String"/>
+	<field name="horaEntrada" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="HoraSalida" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="TurnoMaximo" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="sexo" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="HorariosDeSemana" class="java.lang.String"/>
+	<field name="nombreEspecialidad" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Apellidos" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="numeroContacto" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="NombreResponsable" class="java.lang.String"/>
+	<field name="nombreCargo" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombreArea" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<image>
+				<reportElement x="4" y="0" width="74" height="72" uuid="c26c3732-dc59-4697-bf04-9fda6a4ce369"/>
+				<imageExpression><![CDATA["C:\\Users\\programacion\\Documents\\NetBeansProjects\\HospitalInfectologia2015519\\src\\org\\gildardoalvarado\\images\\iconoHospital.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="231" y="48" width="180" height="20" uuid="d43a6291-20d8-45d6-989a-16ec752530ff"/>
+				<textElement>
+					<font fontName="Footlight MT Light" size="14"/>
+				</textElement>
+				<text><![CDATA[Confia tu salud en nosotros ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="83" y="12" width="472" height="36" uuid="3b021051-d738-4a3d-9a30-d12a2384551b"/>
+				<textElement>
+					<font fontName="Footlight MT Light" size="22"/>
+				</textElement>
+				<text><![CDATA[HOSPITAL DE INFECTOLOGÍA "José De Dios"]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="104" splitType="Stretch">
+			<image>
+				<reportElement x="377" y="0" width="133" height="92" uuid="f1c2627f-ca22-46b3-8df3-4571efebb276"/>
+				<imageExpression><![CDATA["C:\\Users\\programacion\\Documents\\NetBeansProjects\\HospitalInfectologia2015519\\src\\org\\gildardoalvarado\\images\\Fondo de reporte.jpg"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="440" y="38" width="57" height="64" uuid="66bc4119-3407-4257-b992-7648713abc16"/>
+				<imageExpression><![CDATA["C:\\Users\\programacion\\Documents\\NetBeansProjects\\HospitalInfectologia2015519\\src\\org\\gildardoalvarado\\images\\Reporte Hospiatal.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="143" y="38" width="181" height="54" uuid="27fceb80-8b37-48fe-a6ec-9949509a50d3"/>
+				<textElement>
+					<font fontName="Footlight MT Light" size="36"/>
+				</textElement>
+				<text><![CDATA[REPORTE]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="69" splitType="Stretch">
+			<line>
+				<reportElement x="1" y="26" width="555" height="1" forecolor="#00CCCC" uuid="9683907c-1037-444f-8bf5-40eb2b331a0d"/>
+			</line>
+			<staticText>
+				<reportElement x="283" y="6" width="64" height="20" uuid="23383a08-824b-4e07-ab2c-c42626c317a3"/>
+				<text><![CDATA[HoraEntrada]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="354" y="6" width="64" height="20" uuid="4c662d95-e30a-4188-b990-b56ff9dd3e46"/>
+				<text><![CDATA[HoraSalida]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="418" y="6" width="28" height="20" uuid="a35c340c-ea7c-49de-95c6-691f89dafd30"/>
+				<text><![CDATA[TurnoMaximo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="459" y="6" width="23" height="20" uuid="ec5cc32b-0b29-429a-b33a-2f12c6abe51b"/>
+				<text><![CDATA[sexo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="87" y="6" width="91" height="20" uuid="d92a8fd0-dd97-4d31-bb0b-852864e667eb"/>
+				<text><![CDATA[LicenciaMedica]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="497" y="6" width="46" height="20" uuid="47a192ca-433d-480e-9d6e-552db5a3c60c"/>
+				<text><![CDATA[Horario]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="6" width="70" height="20" uuid="bf10cd18-77cb-467b-ac49-0f5ccb72e3e1"/>
+				<text><![CDATA[CodigoMedico]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="28" width="58" height="20" uuid="c89a8903-59f6-4fd3-86bd-6f9a952576fa"/>
+				<text><![CDATA[nombreEspe]]></text>
+			</staticText>
+			<line>
+				<reportElement x="5" y="47" width="555" height="1" forecolor="#00CCCC" uuid="8bcab7e4-cbc6-41be-9e68-2576ac86015d"/>
+			</line>
+			<staticText>
+				<reportElement x="78" y="28" width="100" height="20" uuid="8847f08b-3388-4182-a51b-6634f61e2be9"/>
+				<text><![CDATA[NumeroContacto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="341" y="28" width="70" height="20" uuid="c4bc7768-ebfc-4c06-96c4-199604e6faf4"/>
+				<text><![CDATA[NombreCargo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="440" y="28" width="69" height="20" uuid="a4f014f9-731a-46a2-baed-8380cf9e804e"/>
+				<text><![CDATA[NombreArea]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="191" y="6" width="65" height="20" uuid="91a83d5b-d662-4e2b-b57c-9f48ff931063"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Nombres]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="201" y="28" width="100" height="20" uuid="0d65a69d-4ea6-4f43-b735-3e7177ff4d72"/>
+				<text><![CDATA[NombreResponsable]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="88" splitType="Stretch">
+			<textField>
+				<reportElement x="301" y="22" width="40" height="20" uuid="7a391cf5-0a49-49d8-9622-0d6328711428"/>
+				<textFieldExpression><![CDATA[$F{horaEntrada}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="366" y="22" width="47" height="20" uuid="7a4efac4-7fd1-41be-81a3-e13e4deba3be"/>
+				<textFieldExpression><![CDATA[$F{HoraSalida}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="429" y="22" width="17" height="20" uuid="a8bb1fe0-41ec-4637-b3ad-c625827668dc"/>
+				<textFieldExpression><![CDATA[$F{TurnoMaximo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="468" y="22" width="14" height="20" uuid="4f18761a-5591-4e0e-b138-005ae2d118e9"/>
+				<textFieldExpression><![CDATA[$F{sexo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="99" y="22" width="53" height="20" uuid="f9d14262-04eb-462a-98e8-3aef6c112ab2"/>
+				<textFieldExpression><![CDATA[$F{LicenciaMedica}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="509" y="22" width="40" height="20" uuid="78f36c3e-df56-4427-bb31-9cac6eb5d5e9"/>
+				<textFieldExpression><![CDATA[$F{HorariosDeSemana}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="29" y="11" width="39" height="31" uuid="3ac2f377-4af9-402b-b0cc-4cfb8cad6680"/>
+				<textElement>
+					<font size="20" isBold="false" isItalic="false" isStrikeThrough="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{codigoMedico}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="10" y="44" width="65" height="20" uuid="13cff256-d989-44da-a8bf-de7164444d85"/>
+				<textFieldExpression><![CDATA[$F{nombreEspecialidad}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="5" y="63" width="555" height="1" forecolor="#00CCCC" uuid="202a2172-e739-4645-92f3-1abf6ca640ed"/>
+			</line>
+			<line>
+				<reportElement x="1" y="42" width="555" height="1" forecolor="#00CCCC" uuid="a8a044b8-7c11-4bc8-aeba-ee6f8711a0a3"/>
+			</line>
+			<textField>
+				<reportElement x="100" y="44" width="52" height="20" uuid="d2d2bd7f-f006-48c3-9cd5-392e0a8efccd"/>
+				<textFieldExpression><![CDATA[$F{numeroContacto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="347" y="44" width="64" height="20" uuid="9bfe9a88-e8d3-467a-a1a9-1cd2099649e5"/>
+				<textFieldExpression><![CDATA[$F{nombreCargo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="440" y="44" width="84" height="20" uuid="721c71e8-9f46-496e-ba2a-c7eb3a8b47bb"/>
+				<textFieldExpression><![CDATA[$F{nombreArea}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="163" y="22" width="138" height="20" uuid="62c519bc-c6a1-4df1-b71b-f3c156db3541"/>
+				<textFieldExpression><![CDATA[$F{Nombres}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="201" y="42" width="133" height="20" uuid="80e5dada-89a9-4c88-a553-5b7ee172e574"/>
+				<textFieldExpression><![CDATA[$F{NombreResponsable}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="171" splitType="Stretch">
+			<image>
+				<reportElement x="466" y="48" width="57" height="64" uuid="d4c444a5-3e49-488f-8dc2-d12a92dfa0c7"/>
+				<imageExpression><![CDATA["C:\\Users\\programacion\\Documents\\NetBeansProjects\\HospitalInfectologia2015519\\src\\org\\gildardoalvarado\\images\\Reporte Hospiatal.jpg"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="5" y="44" width="95" height="68" uuid="1ce53150-bc91-45a1-9d6a-c0ac1a0e487b"/>
+				<imageExpression><![CDATA["C:\\Users\\programacion\\Documents\\NetBeansProjects\\HospitalInfectologia2015519\\src\\org\\gildardoalvarado\\images\\pie de pagina.jpg"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="410" y="25" width="145" height="146" uuid="c11db5d0-350e-4be1-8dee-60c48f1b045a"/>
+				<imageExpression><![CDATA["C:\\Users\\programacion\\Documents\\NetBeansProjects\\HospitalInfectologia2015519\\src\\org\\gildardoalvarado\\images\\circulo de pie de pagina.jpg"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="0" y="112" width="513" height="31" uuid="b69255bb-ed62-47a8-8240-1f72a2ce4c72"/>
+				<imageExpression><![CDATA["C:\\Users\\programacion\\Documents\\NetBeansProjects\\HospitalInfectologia2015519\\src\\org\\gildardoalvarado\\images\\barra de pie de pagina.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</pageFooter>
+</jasperReport>
